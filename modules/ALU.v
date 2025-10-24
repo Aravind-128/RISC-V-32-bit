@@ -5,7 +5,7 @@
 
 module ALU(
     input [31:0] SrcA,SrcB,
-    input [4:0] alu_ctrl,
+    input [3:0] alu_ctrl,
     output [31:0] alu_result ,
     output ZF   );
     reg flag;
