@@ -1,0 +1,20 @@
+
+`timescale 1ns / 1ps
+
+
+module mux3(
+input [31:0] a_result,read_data_d,pc_4,
+input [1:0] resultsrc,
+output [31:0] result
+    );
+    reg [31:0] res;
+    always@(*) begin
+         case(resultsrc)
+         2'b00 : res = a_result;
+         2'b01 : res = read_data_d;
+         2'b10 : res = pc_4;
+         endcase
+    end
+    
+    assign result = res;
+endmodule
